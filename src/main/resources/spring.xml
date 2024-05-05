@@ -3,5 +3,5 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="laptop" class="com.vj.Laptop"></bean>
+    <bean id="laptop" class="com.vj.Laptop" scope="prototype"/> <!--scope->singleton or prototype -->
 </beans>
