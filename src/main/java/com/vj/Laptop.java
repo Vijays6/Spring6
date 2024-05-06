@@ -3,6 +3,16 @@ package com.vj;
 public class Laptop {
     private String brand;
 
+    public Ssd getSsd() {
+        return ssd;
+    }
+
+    public void setSsd(Ssd ssd) {
+        this.ssd = ssd;
+    }
+
+    private Ssd ssd;
+
     public Laptop() {
         System.out.println("Obj Created");
     }
