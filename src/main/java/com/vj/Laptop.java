@@ -1,9 +1,8 @@
 package com.vj;
 
-public class Laptop {
+public class Laptop implements Computer {
     private String brand;
     private Ssd ssd;
-
 
     public Ssd getSsd() {
         return ssd;
@@ -13,14 +12,14 @@ public class Laptop {
         this.ssd = ssd;
     }
 
-    public Laptop() {
-        System.out.println("Obj Created");
-    }
-
-    public Laptop(String warranty) {
-        System.out.println("Arg Constructor");
-        System.out.println(warranty);
-    }
+//    public Laptop() {
+//        System.out.println("Obj Created");
+//    }
+//    @ConstructorProperties({"warranty"})
+//    public Laptop(String warranty) {
+//        System.out.println("Arg Constructor");
+//        System.out.println(warranty);
+//    }
 
     public String getBrand() {
         return brand;
@@ -29,5 +28,10 @@ public class Laptop {
     public void setBrand(String brand) {
         System.out.println("Setter Called");
         this.brand = brand;
+    }
+
+    @Override
+    public void startUp() {
+        System.out.println("Laptop Startup");
     }
 }

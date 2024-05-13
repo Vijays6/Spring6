@@ -3,10 +3,20 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="emp" class="com.vj.Employee" scope="prototype">
+        <property name="id" value="699"/>
+        <property name="com" ref="laptop"/>
+    </bean>
+    <bean id="emp2" class="com.vj.Employee" scope="prototype">
+        <property name="id" value="700"/>
+        <property name="com" ref="desktop"/>
+    </bean>
+
     <bean id="laptop" class="com.vj.Laptop" scope="singleton">
         <property name="brand" value="HP"/> <!-- Value attribute for primitive variable -->
-        <property name="ssd" ref="ssdBean"/> <!-- ref attribute for reference variable -->
-        <constructor-arg index="0" value="2 Years"/>
+        <property name="ssd" ref="ssdBean"/><!-- ref attribute for reference variable -->
+        <!--<constructor-arg index="0" value="2 Years"/>-->
     </bean> <!--scope->singleton or prototype -->
     <bean id="ssdBean" class="com.vj.Ssd"/>
+    <bean id="desktop" class="com.vj.Desktop"/>
 </beans>
