@@ -4,8 +4,9 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="laptop" class="com.vj.Laptop" scope="singleton">
-        <property name="brand" value="HP"></property> <!-- Value attribute for primitive variable -->
-        <property name="ssd" ref="ssdBean"></property> <!-- ref attribute for reference variable -->
+        <property name="brand" value="HP"/> <!-- Value attribute for primitive variable -->
+        <property name="ssd" ref="ssdBean"/> <!-- ref attribute for reference variable -->
+        <constructor-arg index="0" value="2 Years"/>
     </bean> <!--scope->singleton or prototype -->
-    <bean id="ssdBean" class="com.vj.Ssd"></bean>
+    <bean id="ssdBean" class="com.vj.Ssd"/>
 </beans>
