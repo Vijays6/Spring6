@@ -32,6 +32,7 @@ public class Laptop implements Computer {
 
     @Override
     public void startUp() {
+        ssd.runSsd();
         System.out.println("Laptop Startup");
     }
 }

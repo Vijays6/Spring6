@@ -12,11 +12,11 @@
         <property name="com" ref="desktop"/>
     </bean>
 
-    <bean id="laptop" class="com.vj.Laptop" scope="singleton">
+    <bean id="laptop" class="com.vj.Laptop" scope="singleton" autowire="byName">
         <property name="brand" value="HP"/> <!-- Value attribute for primitive variable -->
-        <property name="ssd" ref="ssdBean"/><!-- ref attribute for reference variable -->
+<!--        <property name="ssd" ref="ssdBean"/>&lt;!&ndash; ref attribute for reference variable &ndash;&gt;-->
         <!--<constructor-arg index="0" value="2 Years"/>-->
     </bean> <!--scope->singleton or prototype -->
-    <bean id="ssdBean" class="com.vj.Ssd"/>
+    <bean id="ssd" class="com.vj.Ssd"/>
     <bean id="desktop" class="com.vj.Desktop"/>
 </beans>
