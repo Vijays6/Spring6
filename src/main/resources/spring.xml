@@ -3,9 +3,9 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="emp" class="com.vj.Employee" scope="prototype">
+    <bean id="emp" class="com.vj.Employee" scope="prototype" autowire="byType">
         <property name="id" value="699"/>
-        <property name="com" ref="laptop"/>
+<!--        <property name="com" ref="laptop"/>-->
     </bean>
     <bean id="emp2" class="com.vj.Employee" scope="prototype">
         <property name="id" value="700"/>
@@ -18,5 +18,5 @@
         <!--<constructor-arg index="0" value="2 Years"/>-->
     </bean> <!--scope->singleton or prototype -->
     <bean id="ssd" class="com.vj.Ssd"/>
-    <bean id="desktop" class="com.vj.Desktop"/>
+    <bean id="desktop" class="com.vj.Desktop" primary="true"/>
 </beans>
