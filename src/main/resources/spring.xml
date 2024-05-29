@@ -18,5 +18,5 @@
         <!--<constructor-arg index="0" value="2 Years"/>-->
     </bean> <!--scope->singleton or prototype -->
     <bean id="ssd" class="com.vj.Ssd"/>
-    <bean id="desktop" class="com.vj.Desktop" primary="true"/>
+    <bean id="desktop" class="com.vj.Desktop" primary="true" lazy-init="true"/>
 </beans>
