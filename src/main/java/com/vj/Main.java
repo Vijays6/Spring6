@@ -8,14 +8,26 @@ public class Main {
     public static void main(String[] args) {
         //Java Based Config
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        Employee employee=context.getBean(Employee.class);
+        employee.startUp();
+        System.out.println(employee.getId());
+
+
+
+
+
+
+
+
+
 //        Desktop desktop = context.getBean(Desktop.class);//By Type
-        Desktop desktop1 = context.getBean("desktop", Desktop.class);
+       // Desktop desktop1 = context.getBean("desktop", Desktop.class);
         //Default name is method name in AppConfig
         // To Change Use name attribute in @Bean
-        desktop1.startUp();
+       // desktop1.startUp();
 
-        Desktop desktop2 = context.getBean("desktop", Desktop.class);
-        desktop2.startUp();
+//        Desktop desktop2 = context.getBean("desktop", Desktop.class);
+//        desktop2.startUp();
 
 //        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 //        Employee employee = context.getBean("emp",Employee.class);
