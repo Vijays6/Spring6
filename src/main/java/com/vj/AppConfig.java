@@ -1,6 +1,7 @@
 package com.vj;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -17,7 +18,7 @@ public class AppConfig {
     @Bean
     @Primary
     //@Scope("prototype")//Default value is singleton
-    public Laptop laptop(Ssd ssd) {
+    public Laptop laptop(@Qualifier("ssd") Ssd ssd) {//If we want to mention bean name use Qualifier
         Laptop laptop=new Laptop();
         laptop.setSsd(ssd);
         return laptop;
