@@ -1,7 +1,14 @@
 package com.vj;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class Laptop implements Computer {
     private String brand;
+    @Autowired
     private Ssd ssd;
 
     public Ssd getSsd() {
@@ -12,9 +19,9 @@ public class Laptop implements Computer {
         this.ssd = ssd;
     }
 
-//    public Laptop() {
-//        System.out.println("Obj Created");
-//    }
+    public Laptop() {
+        System.out.println("Laptop Constructor Called...");
+    }
 //    @ConstructorProperties({"warranty"})
 //    public Laptop(String warranty) {
 //        System.out.println("Arg Constructor");
